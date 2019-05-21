@@ -10,6 +10,8 @@ class ToDoList extends React.Component{ // 「reactコンポーネント」の�
       textTitle: '',
       textContent: ''
     };
+    this.addToDo = this.addToDo.bind(this); // ここの2行はとりあえず気にしなくてok。気になるよーって人は「react es6 bind」で調べてみよう！
+    this.deleteToDo = this.deleteToDo.bind(this);
   }　
 
   addToDo(){ // 追加ボタンが押されたときの処理を書いている「関数」だよ
