@@ -31,7 +31,7 @@ class ToDoList extends React.Component{ // 「reactコンポーネント」の�
       return <li key={i}> {/*<li>は「html」さんの特殊能力だよ。何をするものかわからなかったら調べてみよう */ }
         タイトル：{m.title}<br/> {/*<br>も「html」さんの特殊能力だよ。 */}
         内容：{m.content}<br/>
-        <button onClick={e => this.deleteToDo(i)}>削除{i}</button> {/*<button>も「html」さんの特殊能力だよ。onClickという記述で、このボタンが押されたときの処理を追加できるよ*/}
+        <button onClick={() => this.deleteToDo(i)}>削除{i}</button> {/*<button>も「html」さんの特殊能力だよ。onClickという記述で、このボタンが押されたときの処理を追加できるよ*/}
       </li>;
     });
 
@@ -46,7 +46,7 @@ class ToDoList extends React.Component{ // 「reactコンポーネント」の�
             onChange={e => this.setState({textContent: e.target.value})}/>
 
         </div>
-        <button onClick={e => this.addToDo()}>追加</button>
+        <button onClick={this.addToDo}>追加</button>
         <ul>{domList}</ul> {/*ここでさっき宣言したdomListを表示しているよ。あと<ul>も「html」さんの特殊能力なんじゃ */}
       </div>
     );
